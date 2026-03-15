@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno - Ibmec</title>
+</head>
+<body>
+    <!-- MAIN -->
+    <main>
+        <h1>Formulário de Cadastro de Aluno</h1>
+
+        <form>          
+            <!-- CAMPO: NOME-->
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <br>
+
+            <!-- CAMPO: E-MAIL -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+
+            <!-- CAMPO: CPF-->
+            <label for="cpf">CPF:</label>
+            <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                inputmode="numeric"
+                pattern="[0-9]{11}"
+                aria-describedby="dica-cpf"
+                required>
+            <small id="dica-cpf">Digite apenas os 11 numeros.</small>
+
+            <br>
+
+            <!-- CAMPO: DATA DE NASCIMENTO -->
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data_nascimento" required>
+
+
+            <br>
+
+            <!-- CAMPO: CURSO -->
+            <label for="curso">Curso:</label>
+            <select>
+                <option value="">Selecione...</option>
+                <option value="ciencia-dados">Ciencia de Dados</option>
+                <option value="eng-computacao">Engenharia de Computacao</option>
+                <option value="eng-software">Engenharia de Software</option>
+            </select>
+
+            <!-- CAMPO: SELECIONAR TURNO -->
+            <fieldset>
+                <legend>Turno de preferencia:</legend>
+                
+                <label for="turno-manha">
+                    <input 
+                        type="radio" 
+                        id="turno-manha" 
+                        name="turno" 
+                        value="manha" 
+                        required>
+                    Manha
+                </label>
+                    
+                <br>
+
+                <label for="turno-tarde">
+                    <input 
+                        type="radio" 
+                        id="turno-tarde" 
+                        name="turno" 
+                        value="tarde" 
+                        required>
+                    Tarde
+                </label>
+                
+                <br>
+
+                <label for="turno-noite">
+                    <input 
+                        type="radio" 
+                        id="turno-noite" 
+                        name="turno" 
+                        value="noite" 
+                        required>
+                    Noite
+                </label>               
+            </fieldset>
+
+            <!-- CAMPO: ACEITE DOS TERMOS -->
+            <label for="aceite-termos">Aceite os termos</label>
+            <input type="checkbox" id="aceite-termos" name="aceite_termos" required>
+
+            <br>
+
+            <button type="submit">Enviar Cadastro</button>
+            <button type="reset">Limpar Formulario</button>
+        </form>
+    </main>
+</body>
+</html>
